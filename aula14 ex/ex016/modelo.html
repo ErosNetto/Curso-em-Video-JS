@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vamos Contar</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Vamos Contar</h1>
+    </header>
+
+    <section>
+      <p>
+        Inicio:
+        <input type="number" name="txtIni" id="txtIni" min="0" />
+      </p>
+
+      <p>
+        Fim:
+        <input type="number" name="txtFim" id="txtFim" min="0" />
+      </p>
+
+      <p>
+        Passo:
+        <input type="number" name="txtPas" id="txtPas" min="0" />
+      </p>
+
+      <input type="button" value="Contar" id="botao" onclick="contar()" />
+      <div id="res">Preparando a contagem...</div>
+    </section>
+
+    <footer>
+      <p>&copy; Eros Netto</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
