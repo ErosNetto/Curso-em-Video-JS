@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vamos Contar</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -12,22 +12,24 @@
     </header>
 
     <section>
-      <p>
-        Inicio:
-        <input type="number" name="txtIni" id="txtIni" min="0" />
-      </p>
+      <div id="dados">
+        <p>
+          Inicio:
+          <input type="number" name="inicio" id="txtIni" min="0" />
+        </p>
+        <p>
+          Fim:
+          <input type="number" name="fim" id="txtFim" min="0" />
+        </p>
+        <p>
+          Passo:
+          <input type="number" name="passo" id="txtPas" min="0" />
+        </p>
+        <p>
+          <input type="button" value="Contar" onclick="contar()" />
+        </p>
+      </div>
 
-      <p>
-        Fim:
-        <input type="number" name="txtFim" id="txtFim" min="0" />
-      </p>
-
-      <p>
-        Passo:
-        <input type="number" name="txtPas" id="txtPas" min="0" />
-      </p>
-
-      <input type="button" value="Contar" id="botao" onclick="contar()" />
       <div id="res">Preparando a contagem...</div>
     </section>
 
