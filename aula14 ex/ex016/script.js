@@ -4,12 +4,14 @@ function contar() {
   let passo = Number(document.querySelector("#txtPas").value);
   let res = document.querySelector("#res");
 
-  if (inicio === "") {
-    res.innerHTML = "Inpossivel contar!";
+  if (inicio === "" || inicio === 0) {
+    res.innerHTML = "Impossivel contar!";
+    return;
   }
 
-  if (fim === "") {
-    res.innerHTML = "Inpossivel contar FIM!";
+  if (fim === "" || fim === 0) {
+    res.innerHTML = "Impossivel contar!";
+    return;
   }
 
   if (passo === 0) {
@@ -17,7 +19,19 @@ function contar() {
     passo = 1;
   }
 
-  for (let index = inicio; index < fim; index + passo) {
-    res.innerHTML += index;
+  if (inicio < fim) {
+    res.innerHTML = "";
+    for (let index = inicio; index <= fim; index += passo) {
+      res.innerHTML += index;
+      res.innerHTML += "&#x1F449;";
+    }
+    res.innerHTML += "&#x1F3C1;";
+  } else {
+    res.innerHTML = "";
+    for (let index = inicio; index >= fim; index -= passo) {
+      res.innerHTML += index;
+      res.innerHTML += "&#x1F449;";
+    }
+    res.innerHTML += "&#x1F3C1;";
   }
 }
