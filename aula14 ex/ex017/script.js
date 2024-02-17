@@ -1,14 +1,17 @@
 function tabuada() {
-  let num = Number(document.querySelector("#txtNum").value);
-  let res = document.querySelector("#res");
+  let num = document.querySelector("#txtNum");
+  let tab = document.querySelector("#seltab");
 
-  if (num === "" || num === 0) {
+  if (num.value.length == 0) {
     alert("Por favor digite um número!");
-  }
+  } else {
+    let n = Number(num.value);
+    tab.innerHTML = "";
 
-  res.innerHTML = "";
-
-  for (let index = 0; index <= 10; index++) {
-    res.innerHTML += `${index} x ${num} = ${index * num} <br>`;
+    for (let c = 1; c <= 10; c++) {
+      let item = document.createElement("option");
+      item.text = `${c} x ${n} = ${c * n}`;
+      tab.appendChild(item);
+    }
   }
 }

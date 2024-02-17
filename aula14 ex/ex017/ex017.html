@@ -12,15 +12,19 @@
     </header>
 
     <section>
-      <p>
-        Número:
-        <input type="number" min="0" id="txtNum" name="txtNum" autofocus />
-        <input type="button" value="Gerar Tabuada" onclick="tabuada()" />
-      </p>
-      <br />
-      <p>
-        <textarea name="res" id="res" cols="30" rows="10"></textarea>
-      </p>
+      <div>
+        <p>
+          Número:
+          <input type="number" min="0" name="num" id="txtNum" autofocus />
+          <input type="button" value="Gerar Tabuada" onclick="tabuada()" />
+        </p>
+      </div>
+
+      <div>
+        <select name="tabuada" id="seltab" size="10">
+          <option>Digite um número acima</option>
+        </select>
+      </div>
     </section>
 
     <footer>
