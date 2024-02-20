@@ -13,18 +13,14 @@
 
     <section>
       <div>
-        <p>
-          Número (entre 1 e 100):
-          <input type="number" min="0" name="num" id="txtNum" autofocus />
-          <input type="button" value="Adicionar" onclick="adicionar()" />
-        </p>
+        Número (entre 1 e 100):
+        <input type="number" min="0" name="num" id="txtNum" autofocus />
+        <input type="button" value="Adicionar" onclick="adicionar()" />
+        <br />
+        <select name="numeros" id="fLista" size="6"></select>
+        <br />
+        <input type="button" value="Finalizar" onclick="finalizar()" />
       </div>
-
-      <div>
-        <select name="numeros" id="seltab" size="6"></select>
-      </div>
-
-      <input type="button" value="Finalizar" onclick="finalizar()" />
 
       <div id="res"></div>
     </section>
